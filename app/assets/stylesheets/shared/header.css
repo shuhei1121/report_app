@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header{
+  position: relative;
+  width: 100vw;
+  height: 15vh;
+}
+
+.title{
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  bottom: 0;
+}
+
+.header-image{
+  width: 100vw;
+  height: 15vh;
+}
+
+.second-bar{
+  display: flex;
+  margin-top: 5px;
+}
+
+.lists-right{
+  display: flex;
+  margin-left: auto;
+  margin-right: 20px;
+  list-style: none;
+}
+
+.search-form {
+  width: 40vw;
+  height: 5vh;
+  display: flex;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.search-form>.input-box {
+  width: 100%;
+  height: 5vh;
+  padding-left: 10px;
+}
+
+.search-button {
+  width: 5vh;
+  border: 0;
+  cursor: pointer;
+  background-color: #3ccace;
+  padding: 8px;
+}
+
+.search-icon {
+  width: 100%;
+}
+
+.user-nickname{
+  height: 5vh;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #333333;
+  font-weight: bold;
+  border-bottom: solid 2px black;
+}
+
+.user-nickname:hover{
+  color: red;
+}
+
+.logout{
+  height: 5vh;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  border-bottom: solid 2px black;
+}
+
+.logout:hover{
+  color: red;
+}
+
+.login{
+  height: 5vh;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  color: #333333;
+  font-weight: bold;
+  border-bottom: solid 2px black;
+}
+
+.login:hover{
+  color: red;
+}
+
+.sign-up{
+  height: 5vh;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  border-bottom: solid 2px black;
+}
+
+.sign-up:hover{
+  color: red;
+}

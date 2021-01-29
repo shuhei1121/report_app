@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-root to: 'reports#index'
+  devise_for :users
+  root to: 'reports#index'
 end
