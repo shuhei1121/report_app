@@ -22,6 +22,7 @@
 | headline        | text       | null: false                    |
 | text            | text       | null: false                    |
 | date            | date       | null: false                    |
+| receiver        | string     |                                |
 | user            | references | null: false, foreign_key: true |
 
 ### Association

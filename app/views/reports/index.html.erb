@@ -1,6 +1,21 @@
 <%= render "shared/header" %>
 <div class="main">
-  
-
+<h1 class="main-title">報告書一覧</h1>
+<%= link_to "投稿する", new_report_path, class:"post" %>
+<% @reports.each do |report| %>
+  <div class="report">
+    <div class="report-title">
+      タイトル：<%= link_to report.title, report_path(report.id) %>
+    </div>
+    <div class="report-users">
+          <div class="report-user">
+               from <%= report.user.name %>
+          </div>
+          <div class="report-receiver">
+               to <%= report.receiver %>
+          </div>
+     </div>
+  </div>
+<% end %>
   
 </div>

@@ -2,3 +2,27 @@ a {
 text-decoration: none;
 }
 
+.main{
+  height: 80vh;
+  background-color: whitesmoke;
+  margin-left: 5px;
+}
+
+.report{
+  border:solid 2px turquoise;
+  width: 20vw;
+  text-align: center;
+  background-color: white;
+}
+
+.report-users{
+  display: flex;
+  justify-content: space-around;
+}
+.report-user{
+  font-size: 15px;
+}
+
+.report-receiver{
+  font-size: 15px;
+}
