@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<%= form_with model: @report, local: true do |f| %>
+  <div class="report-box">
+    報告書を作成する
+    <%= render 'shared/error_messages', model: f.object, resource: @report %>
+    <%= f.collection_select(:format_id, Format.all, :id, :name, {}, {class:"format-select"}) %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+    <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+    <%= f.text_field :headline, class:"headline", placeholder:"見出し" %>
+    <%= f.text_area :text, class:"text", placeholder:"本文" %>
+    <%= f.date_field :date, class:"date", placeholder:"年/月/日"%>
+    <%= f.text_field :receiver, class:"receiver", placeholder:"提出先" %>
+    <%= f.submit "作成する" ,class:"btn" %>
+    </div>
+  </div>
+<% end %>
