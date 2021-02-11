@@ -1,0 +1,119 @@
+.show-report-main{
+  height: 1100px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.show-report-content{
+  height: 842px;
+  width: 595px;
+  border: 1px solid white;
+  background-color: white;
+  margin-top: 50px;
+  padding: 8px;
+}
+
+.report-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-report-title{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.show-report-date{
+  margin-top: 25px;
+}
+
+.user-profile{
+  display: flex;
+  margin-top: 20px;
+  border: solid 1px black;
+}
+
+.user-position-box{
+  display: flex;
+  width: 35%;
+  border-right: solid 1px black;
+}
+
+.show-user-string{
+  border-right: solid 1px black;
+  padding: 5px;
+}
+
+.user-name-box{
+  display: flex;
+  width: 65%;
+}
+
+.user-position{
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.user-name{
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.report-content{
+  margin-top: 20px;
+  border: solid 1px black;
+  height: 690px;
+}
+
+.show-report-string{
+  border-bottom: solid 1px black;
+  padding: 3px;
+}
+
+.report-headline{
+  height: 15%;
+  border-bottom: solid 1px black;
+  padding: 3px;
+}
+
+.report-text{
+  padding: 3px;
+}
+
+.show-btn{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  width: 300px;
+}
+
+.return-btn{
+  border: 1px solid rgb(78, 78, 236);
+  background-color: rgb(78, 78, 236);
+  color: white;
+  width: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.edit-btn{
+  border: 1px solid lightseagreen;
+  background-color: lightseagreen;
+  color: white;
+  width: 60px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.delete-btn{
+  border: 1px solid rgb(243, 95, 95);
+  background-color: rgb(243, 95, 95);
+  color: white;
+  width: 60px;
+  font-size: 20px;
+  text-align: center;
+}

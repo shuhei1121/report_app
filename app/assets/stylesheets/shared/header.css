@@ -13,6 +13,7 @@
   font-size: 50px;
   color: white;
   bottom: 0;
+  font-style: italic;
 }
 
 .header-image{
@@ -60,12 +61,11 @@
 
 .user-nickname{
   height: 5vh;
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: none;
   margin-right: 20px;
   color: #333333;
   font-weight: bold;
-  border-bottom: solid 2px black;
 }
 
 .user-nickname:hover{
@@ -78,7 +78,6 @@
   text-decoration: none;
   color: #333333;
   font-weight: bold;
-  border-bottom: solid 2px black;
 }
 
 .logout:hover{
@@ -89,10 +88,8 @@
   height: 5vh;
   font-size: 20px;
   text-decoration: none;
-  margin-right: 20px;
   color: #333333;
   font-weight: bold;
-  border-bottom: solid 2px black;
 }
 
 .login:hover{
@@ -105,7 +102,6 @@
   text-decoration: none;
   color: #333333;
   font-weight: bold;
-  border-bottom: solid 2px black;
 }
 
 .sign-up:hover{

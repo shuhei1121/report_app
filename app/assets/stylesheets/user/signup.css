@@ -1,0 +1,58 @@
+.register-main{
+  background-color: whitesmoke;
+  width: 60vw;
+  font-size: 20px;
+}
+
+.register-box{
+  background-color: white;
+  padding: 20px 15vw;
+  text-align: center;
+}
+
+.user-register{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: lightseagreen;
+}
+
+.field{
+  margin-top: 30px;
+}
+
+.signup-name{
+  height: 30px;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.signup-email{
+  height: 30px;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.signup-password{
+  height: 30px;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.signup-position{
+  height: 30px;
+  width: 300px;
+  background-color: #f5f5f5;
+}
+
+.actions{
+  margin-top: 40px;
+}
+
+.signup-btn{
+  width: 100px;
+  border: 1px solid lightseagreen;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 20px;
+}

@@ -1,16 +1,30 @@
-<%= render "shared/header" %>
-<%= form_with model: @report, local: true do |f| %>
-  <div class="report-box">
-    報告書を作成する
-    <%= render 'shared/error_messages', model: f.object, resource: @report %>
-    <%= f.collection_select(:format_id, Format.all, :id, :name, {}, {class:"format-select"}) %>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-    <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
-    <%= f.text_field :headline, class:"headline", placeholder:"見出し" %>
-    <%= f.text_area :text, class:"text", placeholder:"本文" %>
-    <%= f.date_field :date, class:"date", placeholder:"年/月/日"%>
-    <%= f.text_field :receiver, class:"receiver", placeholder:"提出先" %>
-    <%= f.submit "作成する" ,class:"btn" %>
-    </div>
+<div class="new-report">
+  <%= render "shared/sub-header" %>
+
+  <div class="new-main">
+    <%= form_with model: @report, local: true do |f| %>
+      <div class="report-box">
+        <h1 class="new-top-title">New Report</h1>
+        <%= render 'shared/error_messages', model: f.object, resource: @report %>
+        <div class="new-nav">日付</div>
+        <%= f.date_field :date, class:"new-date", placeholder:"年/月/日"%>
+        <div class="new-nav">書式</div>
+        <%= f.collection_select(:format_id, Format.all, :id, :name, {}, {class:"select-box"}) %>
+        <div class="new-nav">カテゴリー</div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+        <div class="new-nav">タイトル</div>
+        <%= f.text_field :title, class:"new-title", placeholder:"15文字以内", maxlength:"15" %>
+        <div class="new-nav">件名</div>
+        <%= f.text_area :headline, class:"new-headline", placeholder:"30文字以内", maxlength:"30" %>
+        <div class="new-nav">本文</div>
+        <%= f.text_area :text, class:"new-text", placeholder:"1000文字以内", maxlength:"1000", row:"7" %>
+        <div class="new-nav">提出先</div>
+        <%= f.text_field :receiver, class:"new-receiver", placeholder:"提出先" %>
+        <%= f.submit "作成する" ,class:"btn" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+  
+  <%= render "shared/footer" %>
+</div>

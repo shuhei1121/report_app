@@ -1,21 +1,25 @@
 <%= render "shared/header" %>
+
 <div class="main">
-<h1 class="main-title">報告書一覧</h1>
-<%= link_to "投稿する", new_report_path, class:"post" %>
-<% @reports.each do |report| %>
-  <div class="report">
-    <div class="report-title">
-      タイトル：<%= link_to report.title, report_path(report.id) %>
-    </div>
-    <div class="report-users">
-          <div class="report-user">
-               from <%= report.user.name %>
-          </div>
-          <div class="report-receiver">
-               to <%= report.receiver %>
-          </div>
-     </div>
-  </div>
-<% end %>
+  <div class="main-title">Report List</div>
+
+  <ul class="report-lists">
+    <%= render partial: "report", collection: @reports %>
+  </ul>
   
+  <% if user_signed_in? %>
+    <div class="sub-title">Report to You</div>
+    <ul class="report-lists">
+    <% @reports.each do |report| %>
+      <% if report.receiver == current_user.name%>
+        <%= render partial: "report", locals: { report: report }%>
+      <% end%>
+    <% end %>
+
+    <%= link_to(new_report_path, class: "post-btn") do %>
+    <span class="btn-text">New Report</span>
+    <% end %>
+  <% end %>
 </div>
+
+<%= render "shared/footer" %>

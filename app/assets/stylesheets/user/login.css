@@ -1,0 +1,29 @@
+.login-main{
+  background-color: whitesmoke;
+  width: 60vw;
+  font-size: 20px;
+}
+
+.login-box{
+  background-color: white;
+  padding: 30px 15vw 70px;
+  text-align: center;
+}
+
+.user-login{
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: lightseagreen;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.login-btn{
+  width: 100px;
+  border: 1px solid lightseagreen;
+  background-color: lightseagreen;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}
