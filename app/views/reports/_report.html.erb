@@ -1,0 +1,29 @@
+<li class="report">
+        <div class="report-title">
+          <%= link_to report.title, report_path(report.id) %>
+        <%= link_to report_path(report.id) do %>
+        </div>
+          <% if report.category_id == 2 %>
+          <%= image_tag("text1_mainichi.png",class:"report-image") %>
+          <% elsif report.category_id == 3 %>
+          <%= image_tag("text2_maisyu.png",class:"report-image") %>
+          <% elsif report.category_id == 4 %>
+          <%= image_tag("text3_maitsuki.png",class:"report-image") %>
+          <% elsif report.category_id == 5 %>
+          <%= image_tag("text_shikyuu.png",class:"report-image") %>
+          <% elsif report.category_id == 6 %>
+          <%= image_tag("text_juuyou.png",class:"report-image") %>
+          <% elsif report.category_id == 7 %>
+          <%= image_tag("text_syorui.png",class:"report-image") %>
+          <% end %>
+        <% end %>
+        
+        <div class="report-users">
+              <div class="report-user">
+                  from <%= report.user.name %>
+              </div>
+              <div class="report-receiver">
+                  to <%= report.receiver %>
+              </div>
+        </div>
+      </li>

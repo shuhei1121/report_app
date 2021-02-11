@@ -1,0 +1,16 @@
+.footer{
+  background-color:darkgrey;
+  height: 100px;
+  width: 100vw;
+  text-align: center;
+}
+
+.footer-text{
+  padding-top: 30px;
+}
+
+.footer-name{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}

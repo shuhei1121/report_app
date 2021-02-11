@@ -1,4 +1,34 @@
-<%= @report.title%>
-<%= link_to "戻る", root_path %>
-<%= link_to "編集", edit_report_path(@report.id) %>
-<%= link_to "削除", report_path(@report.id), method: :delete %>
+<%= render "shared/header" %>
+<main class="show-report-main">
+  <div class="show-report-content">
+    <div class="report-top">
+      <div class="show-report-title"><%= @report.title%></div>
+      <div class="show-report-date"><%= @report.date.strftime("%Y年 %m月 %d日") %></div>
+    </div>
+
+    <div class="user-profile">
+      <div class="user-position-box">
+        <div class="show-user-string">所属</div>
+        <div class="user-position"><%= @report.user.position %></div>
+      </div>
+      <div class="user-name-box">
+        <div class="show-user-string">氏名</div>
+        <div class="user-name"><%= @report.user.name %></div>
+      </div>
+    </div>
+ 
+    <div class="report-content">
+      <div class="show-report-string">件名</div>
+      <div class="report-headline" ><%= @report.headline %></div>
+      <div class="show-report-string">内容</div>
+      <div class="report-text"><%= @report.text%></div>
+    </div>
+
+  </div>
+  <div class="show-btn">
+    <%= link_to "戻る", root_path, class:"return-btn" %>
+    <%= link_to "編集", edit_report_path(@report.id), class:"edit-btn" %>
+    <%= link_to "削除", report_path(@report.id), method: :delete, class:"delete-btn" %>
+  </div>
+</main>
+<%= render "shared/footer" %>
