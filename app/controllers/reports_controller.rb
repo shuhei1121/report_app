@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
-  before_action :set_report, only: [:show, :edit, :update, :destroy]
+  before_action :set_report, only: [:show, :edit, :update, :destroy, :access_limit]
+  before_action :access_limit, only: [:edit, :destroy]
   def index
     @reports = Report.order("created_at DESC")
   end
@@ -48,6 +49,12 @@ class ReportsController < ApplicationController
   
   def set_report
     @report = Report.find(params[:id])
+  end
+
+  def access_limit
+    if current_user.id != @report.user_id
+      redirect_to root_path
+    end
   end
 
 end

@@ -1,0 +1,17 @@
+#error_explanation{
+  font-size: 18px;
+  color: red;
+  background-color: lightyellow;
+}
+
+.login-flash-message{
+  font-size: 18px;
+  color: red;
+  background-color: lightyellow;
+}
+
+.error-message{
+  font-size: 18px;
+  color: red;
+  background-color: lightyellow;
+}

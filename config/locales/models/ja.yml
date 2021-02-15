@@ -1,0 +1,14 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: 氏名
+       position: 所属・役職
+     report:
+       format_id: 書式
+       category_id: カテゴリー
+       title: タイトル
+       headline: 件名
+       text: 本文
+       date: 日付
+       receiver: 提出先
