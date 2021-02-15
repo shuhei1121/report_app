@@ -1,7 +1,10 @@
 <%= render "shared/header" %>
 
 <div class="main">
-  <div class="main-title">Report List</div>
+  <div class="main-bar">
+    <div class="main-title">Report List</div>
+    <div class="page-btn"><%= paginate @reports %></div>
+  </div>
 
   <ul class="report-lists">
     <%= render partial: "report", collection: @reports %>
@@ -10,11 +13,12 @@
   <% if user_signed_in? %>
     <div class="sub-title">Report to You</div>
     <ul class="report-lists">
-    <% @reports.each do |report| %>
-      <% if report.receiver == current_user.name%>
-        <%= render partial: "report", locals: { report: report }%>
-      <% end%>
-    <% end %>
+      <% @reports.each do |report| %>
+        <% if report.receiver == current_user.name%>
+          <%= render partial: "report", locals: { report: report }%>
+        <% end%>
+      <% end %>
+    </ul>
 
     <%= link_to(new_report_path, class: "post-btn") do %>
     <span class="btn-text">New Report</span>

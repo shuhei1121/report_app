@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update, :destroy, :access_limit]
   before_action :access_limit, only: [:edit, :destroy]
   def index
-    @reports = Report.order("created_at DESC")
+    @reports = Report.order("created_at DESC").all.page(params[:page]).per(5)
   end
   
   def new

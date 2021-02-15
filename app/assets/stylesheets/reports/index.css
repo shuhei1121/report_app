@@ -6,18 +6,31 @@ text-decoration: none;
   height: 800px;
   background-color: whitesmoke;
   margin-left: 5px;
+  margin-right: 5px;
   padding-bottom: 30px;
 }
 
+.main-bar{
+  width: 100%;
+  display: flex;
+  border-bottom: solid 2px black;
+  align-items: flex-end;
+  height: 70px;
+}
+
 .main-title{
-  margin-top: 10px;
   font-size: 30px;
   font-style: italic;
-  border-bottom: solid 2px black;
+}
+
+.page-btn{
+  margin-left: auto;
+  height: 57px;
 }
 
 .report-lists{
   display: flex;
+  justify-content: space-between;
   margin-top: 5px;
 }
 
