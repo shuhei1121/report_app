@@ -19,7 +19,12 @@
         <div class="new-nav">本文</div>
         <%= f.text_area :text, class:"new-text", placeholder:"1000文字以内", maxlength:"1000", row:"7" %>
         <div class="new-nav">提出先</div>
-        <%= f.text_field :receiver, class:"new-receiver", placeholder:"提出先" %>
+        <select name="report[receiver]", class="new-receiver">
+          <option value="">提出先を選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%=user.name %>><%= user.name %></option>
+          <% end %>
+        </select>
         <%= f.submit "保存" ,class:"btn" %>
         </div>
       </div>

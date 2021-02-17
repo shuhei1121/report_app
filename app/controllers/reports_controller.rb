@@ -2,8 +2,14 @@ class ReportsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   before_action :set_report, only: [:show, :edit, :update, :destroy, :access_limit]
   before_action :access_limit, only: [:edit, :destroy]
+
   def index
-    @reports = Report.order("created_at DESC").all.page(params[:page]).per(5)
+    @reports = Report.order("created_at DESC").all.page(params[:page]).per(10)
+    if user_signed_in?
+      @reports = Report.order("created_at DESC").all.page(params[:page]).per(10)
+      @to_reports = Report.where(receiver: current_user.name).order("created_at DESC").all.page(params[:page]).per(5)
+    end
+
   end
   
   def new

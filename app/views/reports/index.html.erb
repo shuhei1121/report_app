@@ -1,22 +1,11 @@
 <%= render "shared/header" %>
 
 <div class="main">
-  <div class="main-bar">
-    <div class="main-title">Report List</div>
-    <div class="page-btn"><%= paginate @reports %></div>
-  </div>
-
-  <ul class="report-lists">
-    <%= render partial: "report", collection: @reports %>
-  </ul>
-  
   <% if user_signed_in? %>
     <div class="sub-title">Report to You</div>
     <ul class="report-lists">
-      <% @reports.each do |report| %>
-        <% if report.receiver == current_user.name%>
+      <% @to_reports.each do |report| %>
           <%= render partial: "report", locals: { report: report }%>
-        <% end%>
       <% end %>
     </ul>
 
@@ -24,6 +13,15 @@
     <span class="btn-text">New Report</span>
     <% end %>
   <% end %>
+
+  <div class="main-bar">
+    <div class="main-title">Report List</div>
+    <div class="page-btn"><%= paginate @reports %></div>
+  </div>
+  <ul class="report-lists">
+    <%= render partial: "report", collection: @reports %>
+  </ul>
+  
 </div>
 
 <%= render "shared/footer" %>

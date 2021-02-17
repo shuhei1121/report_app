@@ -9,8 +9,13 @@
   padding-top: 30px;
 }
 
+
 .footer-name{
-  text-decoration: none;
   color: white;
   font-size: 30px;
+}
+
+.footer-name:hover{
+  color: white;
+  text-decoration: none;
 }
