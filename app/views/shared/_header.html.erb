@@ -14,7 +14,7 @@
 
     <ul class='lists-right'>  
       <% if user_signed_in? %>
-        <li><%= link_to current_user.name, "#", class: "user-nickname" %></li>
+        <li><%= link_to current_user.name, "/users/#{current_user.id}", class: "user-nickname" %></li>
         <li><button><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></button></li>
       <% else %>
         <li><button><%= link_to 'ログイン', new_user_session_path, class: "login" %></button></li>
