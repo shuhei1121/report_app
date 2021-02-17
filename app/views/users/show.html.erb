@@ -1,0 +1,8 @@
+<%= render "shared/header" %>
+<div class="main">
+ <div class="sub-title"><%= @name %>'s Report</div>
+  <ul class="report-lists">
+    <%= render partial: "report", collection: @reports %>
+  </ul>
+</div>
+<%= render "shared/footer" %>
