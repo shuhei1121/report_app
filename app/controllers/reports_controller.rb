@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :authenticate_user!, except: %i[index show]
+  before_action :authenticate_user!, except: [:index, :show, :search]
   before_action :set_report, only: [:show, :edit, :update, :destroy, :access_limit]
   before_action :access_limit, only: [:edit, :destroy]
 
@@ -45,6 +45,12 @@ class ReportsController < ApplicationController
     else
       render :show
     end
+  end
+
+  def search
+    @keyword = params[:keyword]
+    @reports = Report.search(@keyword).order("created_at DESC").all.page(params[:page]).per(10)
+    @to_reports = Report.search(@keyword).where(receiver: current_user.name).order("created_at DESC").all.page(params[:page]).per(5)
   end
 
   private

@@ -11,4 +11,12 @@ class Report < ApplicationRecord
   validates :text, length: { maximum: 1000}
   validates :format_id, :category_id, numericality: { other_than: 1 } 
 
+  def self.search(search)
+    if search != ""
+      Report.where('text LIKE(?)', "%#{search}%")
+    else
+      Report.all
+    end
+  end
+
 end

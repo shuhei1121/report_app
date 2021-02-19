@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+
+<div class="main">
+  <% if user_signed_in? %>
+    <div class="sub-title">
+      Report to You <span class="search-word">--- 検索ワード：<%= @keyword %></span>
+    </div>
+    <ul class="report-lists">
+      <% @to_reports.each do |report| %>
+          <%= render partial: "report", locals: { report: report }%>
+      <% end %>
+    </ul>
+
+    <%= link_to(new_report_path, class: "post-btn") do %>
+    <span class="btn-text">New Report</span>
+    <% end %>
+  <% end %>
+
+  <div class="main-bar">
+    <div class="main-title">Report List</div>
+    <div class="page-btn"><%= paginate @reports %></div>
+  </div>
+  <ul class="report-lists">
+    <%= render partial: "report", collection: @reports %>
+  </ul>
+  
+</div>
+
+<%= render "shared/footer" %>
