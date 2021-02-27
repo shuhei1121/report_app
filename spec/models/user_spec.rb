@@ -21,20 +21,19 @@ RSpec.describe User, type: :model do
         @user.position = nil
         expect(@user).to be_valid
       end
-      
     end
 
     context 'ユーザー登録できない場合' do
       it 'nameが空では登録できない' do
         @user.name = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("氏名を入力してください")
+        expect(@user.errors.full_messages).to include('氏名を入力してください')
       end
 
       it 'emailが空では登録できない' do
         @user.email = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("Eメールを入力してください")
+        expect(@user.errors.full_messages).to include('Eメールを入力してください')
       end
 
       it '重複したemailが存在する場合登録できない' do
@@ -53,7 +52,7 @@ RSpec.describe User, type: :model do
       it 'passwordが空では登録できない' do
         @user.password = nil
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
 
       it 'passwordが5文字以下の場合登録できない' do
@@ -67,7 +66,7 @@ RSpec.describe User, type: :model do
         @user.password = 'test123'
         @user.password_confirmation = 'test1234'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
 
       it 'passwordは半角英数字混合でない場合登録できない' do
@@ -76,7 +75,6 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('パスワードは不正な値です', 'パスワード（確認用）は不正な値です')
       end
-
     end
   end
 end
