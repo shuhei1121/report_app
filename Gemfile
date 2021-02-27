@@ -64,5 +64,3 @@ gem 'active_hash'
 gem 'rails-i18n'
 
 gem 'kaminari'
-
-gem 'dotenv-rails'
