@@ -58,7 +58,6 @@ https://report-app-1121.herokuapp.com/
 #### Association
 
 - has_many :reports
-- has_many :comments
 
 ### reports テーブル
 
@@ -76,4 +75,3 @@ https://report-app-1121.herokuapp.com/
 #### Association
 
 - belongs_to :user
-- has_many :comments
