@@ -28,10 +28,13 @@ https://report-app-1121.herokuapp.com/
   - 検索機能
 
 - DEMO
-  - トップページ：https://gyazo.com/6f2acea80ec39c055052bbe89e0f4a86
-  - 報告書作成画面：https://gyazo.com/a23abaaebb5f1417cdfa6c55c3738db9
-  - 報告書閲覧画面：https://gyazo.com/84df67c6d9133bf1eea243076ac0c147
-
+  - トップページ<br>
+  ![](https://i.gyazo.com/6f2acea80ec39c055052bbe89e0f4a86.jpg)
+  - 報告書作成画面<br>
+  ![](https://i.gyazo.com/a23abaaebb5f1417cdfa6c55c3738db9.png)
+  - 報告書閲覧画面<br>
+  ![](https://i.gyazo.com/84df67c6d9133bf1eea243076ac0c147.png)
+  
 - 今後の課題・実装予定
   - CircleCI導入
   - 第２フォーマット作成
